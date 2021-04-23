@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
       ),
       home: MyHomePage(),
       debugShowCheckedModeBanner: false,
-      // builder: EasyLoading.init(),
+      builder: EasyLoading.init(),
     );
   }
 }
@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  Future isInternet() async {
+  Future isInteret() async {
     await SyncronizationData.isInternet().then((connection) {
       if (connection) {
         print("Internet connection available");
@@ -92,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     userList();
-    isInternet();
+    isInteret();
     EasyLoading.addStatusCallback((status) {
       print('EasyLoading Status $status');
       if (status == EasyLoadingStatus.dismiss) {
