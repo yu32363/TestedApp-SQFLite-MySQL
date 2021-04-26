@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  Future isInteret() async {
+  Future isInternet() async {
     await SyncronizationData.isInternet().then((connection) {
       if (connection) {
         print("Internet connection available");
@@ -92,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     userList();
-    isInteret();
+    isInternet();
     EasyLoading.addStatusCallback((status) {
       print('EasyLoading Status $status');
       if (status == EasyLoadingStatus.dismiss) {
